@@ -14,11 +14,11 @@ const [cpf, setcpf]=useState('');
 
   return (
    <Col style={{backgroundColor:'#bedfd4', width:'100vw', height: '100vh'}} >
-   <Row style={{backgroundColor:'#bedfd4', width:'100vw', height: '12vh'}} ></Row>
+   <Row style={{backgroundColor:'#bedfd4', width:'90vw', height: '12vh', display:'flex', alignItems:'center', marginLeft:'10vw'}} ><img width={200} height={50} alt='logo' src='https://cdn.4devs.com.br/imagens/logo_4devs.png'/></Row>
    <Row style={{display:'flex', backgroundColor:'#f5f5f5', width:'100vw', height: '78vh'}} >
     <Row style={{display:'flex',justifyContent:'center',alignItems:'center', backgroundColor:'#f4f4f4', width:'100vw'}}>
     <Card >
-    <Input  style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px', marginRight:'10px'}} placeholder='Gerador de CPF' />
+    <Input  style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px', marginRight:'10px', paddingLeft:'10px'}} placeholder='Gerador de CPF' />
     </Card>
     <Button style={{backgroundColor:'#336a7a', width:'200px', height:'50px', fontSize:'15px'}} >GERAR CPF</Button>
     </Row>
