@@ -5,6 +5,7 @@ import { Col , Card, Row, CardFooter,Text, Input, Button } from 'reactstrap'
 import styles from '../styles/Home.module.css'
 import logo from "../src/assets/logo5devs.png"
 import { generate } from 'gerador-validador-cpf'
+import { BsFiles } from "react-icons/bs";
 
 export default function Home() {
 
@@ -34,9 +35,10 @@ function copiarTexto() {
    <Row style={{backgroundColor:'#bedfd4', width:'90vw', height: '12vh', display:'flex', alignItems:'center', marginLeft:'10vw'}} ><Image  width={200} height={50} alt='logo' src={logo}/></Row>
    <Row style={{display:'flex', backgroundColor:'#f5f5f5', width:'100vw', height: '78vh'}} >
     <Row style={{display:'flex',justifyContent:'center',alignItems:'center', backgroundColor:'#f4f4f4', width:'100vw'}}>
-    <Card >
-    <Input id='texto-usuario' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px', marginRight:'10px', paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CPF' value={cpf}  />
-    <Button style={{backgroundColor:'#336a7a', width:'80px', height:'50px', fontSize:'15px'}} onClick={copiarTexto} >Copiar CPF</Button>
+    <Card  style={{display:'flex',justifyContent:'center',alignItems:'center', width:'40vw'}} >
+    <Input  id='texto-usuario' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px',  paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CPF' value={cpf} ></Input>
+    <BsFiles style={{ width:'30px', height:'30px', fontSize:'15px', color:'#000', borderColor:'#f5f5f5'}} onClick={copiarTexto} ></BsFiles>
+    
     </Card>
     <Button style={{backgroundColor:'#336a7a', width:'200px', height:'50px', fontSize:'15px'}} onClick={gerarcpf} >GERAR CPF</Button>
     </Row>
