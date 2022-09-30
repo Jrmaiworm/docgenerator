@@ -15,7 +15,19 @@ const gerarcpf = async() =>{
   await setcpf(generate({ format: true }));
   console.log(cpf)
 }
+function copiarTexto() {
+  /* Selecionamos por ID o nosso input */
+  var textoCopiado = document.getElementById("texto-usuario");
 
+  /* Deixamos o texto selecionado (em azul) */
+  textoCopiado.select();
+  textoCopiado.setSelectionRange(0, 99999); /* Para mobile */
+
+  /* Copia o texto que está selecionado */
+  document.execCommand("copy");
+
+  alert("Texto copiado: " + textoCopiado.value);
+}
 
   return (
    <Col style={{backgroundColor:'#bedfd4', width:'100vw', height: '100vh'}} >
@@ -23,12 +35,11 @@ const gerarcpf = async() =>{
    <Row style={{display:'flex', backgroundColor:'#f5f5f5', width:'100vw', height: '78vh'}} >
     <Row style={{display:'flex',justifyContent:'center',alignItems:'center', backgroundColor:'#f4f4f4', width:'100vw'}}>
     <Card >
-    <Input  style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px', marginRight:'10px', paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CPF' value={cpf}  />
+    <Input id='texto-usuario' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px', marginRight:'10px', paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CPF' value={cpf}  />
+    <Button style={{backgroundColor:'#336a7a', width:'80px', height:'50px', fontSize:'15px'}} onClick={copiarTexto} >Copiar CPF</Button>
     </Card>
     <Button style={{backgroundColor:'#336a7a', width:'200px', height:'50px', fontSize:'15px'}} onClick={gerarcpf} >GERAR CPF</Button>
     </Row>
-    
-   
    </Row>
    <Row style={{display:'flex'}}>
    <CardFooter 
