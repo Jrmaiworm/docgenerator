@@ -64,7 +64,7 @@ function copiarTexto() {
     </Row>
     <Row style={{marginTop:'50px',display:'flex',justifyContent:'center',alignItems:'center', backgroundColor:'#f4f4f4', width:'80vw'}}>
     <Card  style={{display:'flex',justifyContent:'center',alignItems:'center', width:'25vw'}} >
-    <Input  id='texto-usuario' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px',  paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CNPJ' value={formatCNPJ(cnpj, { pad: true })} ></Input>
+    <Input  id='texto-usuario' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px',  paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CNPJ' value={cnpj} ></Input>
     <BsFiles style={{ width:'30px', height:'30px', fontSize:'15px', color:'#3c3c3c', borderColor:'#f5f5f5'}} onClick={copiarTexto} ></BsFiles>
     </Card>
     <Button style={{backgroundColor:'#336a7a', width:'150px', height:'50px', fontSize:'15px'}} onClick={gerarcnpj} >GERAR CNPJ</Button>
