@@ -25,11 +25,24 @@ const gerarcpf = async() =>{
 const gerarcnpj = async() =>{
   await setCnpj(generateCNPJ());
   console.log('cnpj',cnpj)
-  
+  // formatCNPJ(cnpj, { pad: true })
 }
 function copiarTexto() {
   /* Selecionamos por ID o nosso input */
   var textoCopiado = document.getElementById("texto-usuario");
+
+  /* Deixamos o texto selecionado (em azul) */
+  textoCopiado.select();
+  textoCopiado.setSelectionRange(0, 99999); /* Para mobile */
+
+  /* Copia o texto que está selecionado */
+  document.execCommand("copy");
+
+  alert("Texto copiado: " + textoCopiado.value);
+}
+function copiarTexto2() {
+  /* Selecionamos por ID o nosso input */
+  var textoCopiado = document.getElementById("texto-usuario2");
 
   /* Deixamos o texto selecionado (em azul) */
   textoCopiado.select();
@@ -64,7 +77,7 @@ function copiarTexto() {
     </Row>
     <Row style={{marginTop:'50px',display:'flex',justifyContent:'center',alignItems:'center', backgroundColor:'#f4f4f4', width:'80vw'}}>
     <Card  style={{display:'flex',justifyContent:'center',alignItems:'center', width:'25vw'}} >
-    <Input  id='texto-usuario' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px',  paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CNPJ' value={cnpj} ></Input>
+    <Input  id='texto-usuario2' style={{backgroundColor:'#fff', width:'280px', height:'50px', fontSize:'20px',  paddingLeft:'10px' ,color:'black'}} placeholder='Gerador de CNPJ' value={cnpj} ></Input>
     <BsFiles style={{ width:'30px', height:'30px', fontSize:'15px', color:'#3c3c3c', borderColor:'#f5f5f5'}} onClick={copiarTexto} ></BsFiles>
     </Card>
     <Button style={{backgroundColor:'#336a7a', width:'150px', height:'50px', fontSize:'15px'}} onClick={gerarcnpj} >GERAR CNPJ</Button>
