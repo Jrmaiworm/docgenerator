@@ -248,7 +248,7 @@ export default function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: "#f4f4f4",
-                width: "80vw",
+                width: "70vw",
               }}
             >
               <Card
