@@ -193,7 +193,7 @@ export default function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: "#f4f4f4",
-                width: "70vw",
+                maxWidth: "70vw",
               }}
             >
               <Card
@@ -201,14 +201,14 @@ export default function Home() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "25vw",
+                  maxWidth: "25vw",
                 }}
               >
                 <Input
                   id="texto-usuario"
                   style={{
                     backgroundColor: "#fff",
-                    width: "280px",
+                    maxWidth: "280px",
                     height: "50px",
                     fontSize: "20px",
                     paddingLeft: "10px",
@@ -219,7 +219,7 @@ export default function Home() {
                 ></Input>
                 <BsFiles
                   style={{
-                    width: "30px",
+                    maxWidth: "30px",
                     height: "30px",
                     fontSize: "15px",
                     color: "#3c3c3c",
@@ -231,7 +231,7 @@ export default function Home() {
               <Button
                 style={{
                   backgroundColor: "#336a7a",
-                  width: "150px",
+                  maxWidth: "150px",
                   height: "50px",
                   fontSize: "15px",
                 }}
@@ -248,7 +248,7 @@ export default function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: "#f4f4f4",
-                width: "70vw",
+                maxWidth: "70vw",
               }}
             >
               <Card
@@ -256,14 +256,14 @@ export default function Home() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "25vw",
+                  maxWidth: "25vw",
                 }}
               >
                 <Input
                   id="texto-usuario2"
                   style={{
                     backgroundColor: "#fff",
-                    width: "280px",
+                    maxWidth: "280px",
                     height: "50px",
                     fontSize: "20px",
                     paddingLeft: "10px",
@@ -274,7 +274,7 @@ export default function Home() {
                 ></Input>
                 <BsFiles
                   style={{
-                    width: "30px",
+                    maxWidth: "30px",
                     height: "30px",
                     fontSize: "15px",
                     color: "#3c3c3c",
@@ -286,7 +286,7 @@ export default function Home() {
               <Button
                 style={{
                   backgroundColor: "#336a7a",
-                  width: "150px",
+                  maxWidth: "150px",
                   height: "50px",
                   fontSize: "15px",
                 }}
@@ -305,7 +305,7 @@ export default function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: "#f4f4f4",
-                width: "80vw",
+                maxWidth: "80vw",
               }}
             >
               <Card
