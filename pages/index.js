@@ -20,7 +20,7 @@ import { formatCNPJ } from "@brazilian-utils/brazilian-utils";
 import { AiOutlineRight } from "react-icons/ai";
 import { isValidCPF } from '@brazilian-utils/brazilian-utils';
 import { isValidCNPJ } from '@brazilian-utils/brazilian-utils';
-
+import button from '../src/assets/button.png'
 
 export default function Home() {
   const [cpf, setcpf] = useState("");
@@ -89,10 +89,19 @@ export default function Home() {
           display: "flex",
           alignItems: "center",
           marginLeft: "10vw",
+          justifyContent:'space-around'
         }}
       >
         <Image width={200} height={50} alt="logo" src={logo} />
+         <a href="https://jorge-rei-games-vasco.netlify.app/" target="_blank" rel="noopener noreferrer">
+         <button style={{backgroundColor:'#bedfd4', color:'#000', borderRadius:'15px'}}>
+ 
+        <Image width={100} height={50} alt="logo" src={button} />
+      Jogos online 
+  </button>        </a>
       </Row>
+      <Row></Row>
+      
       <Row
         style={{
           display: "flex",
@@ -297,117 +306,7 @@ export default function Home() {
             </Row>
           )}
 
-{/* { validador ?(
-            <Row
-              style={{
-                marginTop: "50px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#f4f4f4",
-                maxWidth: "80vw",
-              }}
-            >
-              <Card
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "25vw",
-                }}
-              >
-                <Input
-                  id="texto-usuario"
-                  style={{
-                    backgroundColor: "#fff",
-                    width: "280px",
-                    height: "50px",
-                    fontSize: "20px",
-                    paddingLeft: "10px",
-                    color: "black",
-                  }}
-                  placeholder="Validador de CPF"
-                  value={cpf}
-                ></Input>
-                <BsFiles
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    fontSize: "15px",
-                    color: "#3c3c3c",
-                    borderColor: "#f5f5f5",
-                  }}
-                  onClick={copiarTexto}
-                ></BsFiles>
-              </Card>
-              <Button
-                style={{
-                  backgroundColor: "#336a7a",
-                  width: "150px",
-                  height: "50px",
-                  fontSize: "15px",
-                }}
-                onClick={validadorCpf}
-              >
-                VALIDAR CPF
-              </Button>
-            </Row>
-          ) : (
-            <Row
-              style={{
-                marginTop: "50px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#f4f4f4",
-                width: "80vw",
-              }}
-            >
-              <Card
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "25vw",
-                }}
-              >
-                <Input
-                  id="texto-usuario2"
-                  style={{
-                    backgroundColor: "#fff",
-                    width: "280px",
-                    height: "50px",
-                    fontSize: "20px",
-                    paddingLeft: "10px",
-                    color: "black",
-                  }}
-                  placeholder="Validador de CNPJ"
-                  value={validadorCnpj}
-                ></Input>
-                <BsFiles
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    fontSize: "15px",
-                    color: "#3c3c3c",
-                    borderColor: "#f5f5f5",
-                  }}
-                  onClick={copiarTexto2}
-                ></BsFiles>
-              </Card>
-              <Button
-                style={{
-                  backgroundColor: "#336a7a",
-                  width: "150px",
-                  height: "50px",
-                  fontSize: "15px",
-                }}
-                onClick={gerarcnpj}
-              >
-                VALIDAR CNPJ
-              </Button>
-            </Row>
-          )} */}
+
         </Col>
       </Row>
       <Row style={{ display: "flex" }}>
