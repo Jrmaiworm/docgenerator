@@ -75,7 +75,12 @@ export default function Home() {
     setCnpj("");
   }
 
- 
+  function handleClick() {
+    const confirmed = window.confirm('Atenção! \nClique em ok se você ama o Vasco!');
+    if (confirmed) {
+      window.location.href = 'https://jorge-rei-games-vasco.netlify.app/';
+    }
+  }
 
   return (
     <Col
@@ -93,12 +98,13 @@ export default function Home() {
         }}
       >
         <Image width={200} height={50} alt="logo" src={logo} />
-         <a href="https://jorge-rei-games-vasco.netlify.app/" target="_blank" rel="noopener noreferrer">
+         {/* <a href="https://jorge-rei-games-vasco.netlify.app/" onclick="return confirm('Clique para ir para os jogos')" >
          <button style={{backgroundColor:'#bedfd4', color:'#000', borderRadius:'15px'}}>
- 
-        <Image width={100} height={50} alt="logo" src={button} />
-      Jogos online 
-  </button>        </a>
+  */}
+   <button  style={{backgroundColor:'#bedfd4', color:'#000', borderRadius:'15px'}} onClick={handleClick}>Emulador online
+        <Image  width={100} height={50} alt="logo" src={button} /></button>
+      {/* Jogos online 
+  </button>        </a> */}
       </Row>
       <Row></Row>
       
