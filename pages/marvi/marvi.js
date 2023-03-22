@@ -43,7 +43,7 @@ function Chatbot() {
 
   return (
     <div style={{padding:'10px'}}>
-        <h2>Faça uma pergunta</h2>
+        <h2 style={{marginLeft:"10px"}}>Faça uma pergunta</h2>
         <div>
         <ul style={{ whiteSpace: "pre-wrap" }}>
         {messages.map((message, index) => (
