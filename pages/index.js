@@ -21,6 +21,7 @@ import { AiOutlineRight } from "react-icons/ai";
 import { isValidCPF } from '@brazilian-utils/brazilian-utils';
 import { isValidCNPJ } from '@brazilian-utils/brazilian-utils';
 import button from '../src/assets/button.png'
+import Chatbot from "./marvi/marvi";
 
 export default function Home() {
   const [cpf, setcpf] = useState("");
@@ -106,7 +107,7 @@ export default function Home() {
       {/* Jogos online 
   </button>        </a> */}
       </Row>
-      <Row></Row>
+      <Row> <Chatbot/></Row>
       
       <Row
         style={{
