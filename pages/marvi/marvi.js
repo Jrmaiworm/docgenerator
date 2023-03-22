@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 
+
+const apiKey = process.env.OPENAI_API_KEY;
+console.log('apiKey', apiKey)
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey:process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -12,24 +15,30 @@ function Chatbot() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: inputMessage,
-      temperature: 0.5,
-      max_tokens: 600,
-      top_p: 0.3,
-      frequency_penalty: 0.5,
-      presence_penalty: 0.0,
-    });
-    const newMessage = {
-      text: response.data.choices[0].text,
-      author: "Jorge Sábio",
-    };
-    setMessages([...messages, newMessage]);
-    setInputMessage("");
-    if (messages.length >= 5) {
-        setMessages(messages.slice(messages.length - 4, messages.length));
-      }
+    try {
+      const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: inputMessage,
+        temperature: 0.5,
+        max_tokens: 600,
+        top_p: 0.3,
+        frequency_penalty: 0.5,
+        presence_penalty: 0.0,
+      });
+      const newMessage = {
+        text: response.data.choices[0].text,
+        author: "Jorge Sábio",
+      };
+      setMessages([...messages, newMessage]);
+      setInputMessage("");
+      if (messages.length >= 5) {
+          setMessages(messages.slice(messages.length - 4, messages.length));
+        }
+      
+    
+    } catch (error) {
+      alert('deu ruim...')
+    }
     
   }
 
