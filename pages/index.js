@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
   async function fetchData() {
     try {
-      const response = await axios.get("http://177.70.102.109:3005/key");
+      const response = await axios.get("https://177.70.102.109:3005/key");
       setData(response.data);
      
     } catch (error) {
