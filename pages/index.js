@@ -22,8 +22,25 @@ import { isValidCPF } from '@brazilian-utils/brazilian-utils';
 import { isValidCNPJ } from '@brazilian-utils/brazilian-utils';
 import button from '../src/assets/button.png'
 import Chatbot from "./marvi/marvi";
+import { useEffect } from "react";
+import axios from 'axios';
 
 export default function Home() {
+
+  const [data, setData] = useState("");
+  useEffect(() => {
+    fetchData();
+  }, []);
+  async function fetchData() {
+    try {
+      const response = await axios.get("http://177.70.102.109:3005/key");
+      setData(response.data);
+     
+    } catch (error) {
+      console.log("error");
+    }
+  }
+  
   const [cpf, setcpf] = useState("");
   const [cnpj, setCnpj] = useState("");
   const [gerador, setGerador] = useState(true);
@@ -107,7 +124,7 @@ export default function Home() {
       {/* Jogos online 
   </button>        </a> */}
       </Row>
-      <Row> <Chatbot/></Row>
+      <Row> <Chatbot data={data}/></Row>
       
       <Row
         style={{
